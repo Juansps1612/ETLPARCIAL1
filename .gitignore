@@ -1,0 +1,26 @@
+# Entornos virtuales
+venv/
+.env/
+
+# Archivos temporales de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+
+# Archivos de logs
+*.log
+
+# Archivos de Spark/Hadoop temporales
+derby.log
+.metastore_db/
+spark-warehouse/
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Salidas del ETL
+WorldCupPlayers_clean.csv
+*.db
