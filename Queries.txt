@@ -1,0 +1,32 @@
+-- Mostrar las primeras 5 filas de la tabla
+SELECT * FROM world_cup_players LIMIT 5;
+
+-- Contar el número total de jugadores
+SELECT COUNT(*) AS total_jugadores FROM world_cup_players;
+
+-- Ver los equipos únicos que participaron
+SELECT DISTINCT Team FROM world_cup_players;
+
+-- Contar cuántos jugadores hay por equipo
+SELECT Team, COUNT(*) AS num_jugadores
+FROM world_cup_players
+GROUP BY Team
+ORDER BY num_jugadores DESC;
+
+-- Buscar todos los jugadores con más de 3 goles
+SELECT Name, Team, Goals
+FROM world_cup_players
+WHERE Goals > 3
+ORDER BY Goals DESC;
+
+-- Promedio de edad por equipo
+SELECT Team, AVG(Age) AS promedio_edad
+FROM world_cup_players
+GROUP BY Team
+ORDER BY promedio_edad DESC;
+
+-- Top 10 jugadores con más partidos jugados
+SELECT Name, Team, Matches
+FROM world_cup_players
+ORDER BY Matches DESC
+LIMIT 10;
