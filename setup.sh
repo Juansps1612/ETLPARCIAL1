@@ -23,3 +23,4 @@ if [ ! -f "sqlite-jdbc-3.36.0.3.jar" ]; then
 fi
 
 echo "✅ Entorno listo. Ejecuta: python main.py"
+venv/bin/python ./main.py
